@@ -42,6 +42,7 @@ class MotifsManager(object):
             m.load(self)
 
     def install_motif(self, name, motif):
+        logger.debug("Installing motif {0} : {1}".format(name, motif))
         self._motifs[name] = motif
 
     def __getattr__(self, item):

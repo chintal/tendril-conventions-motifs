@@ -137,6 +137,17 @@ class MotifBase(object):
                           device=dev,
                           footprint=fp)
 
+    def _set_component(self, idx, target, series):
+        value = series.get_closest_value(target)
+        if not value:
+            raise ValueError
+        try:
+            svalue = series.get_symbol(value).value
+        except AttributeError:
+            svalue = series.get_symbol(value)
+        self.get_elem_by_idx(idx).data['value'] = svalue  # noqa
+        return series.get_type_value(svalue)
+
     def validate(self):
         raise NotImplementedError
 
