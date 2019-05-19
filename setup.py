@@ -25,7 +25,7 @@ test_requirements = [
 setup(
     name='tendril-conventions-motifs',
     version='0.1.1',
-    description="Tendril Motifs",
+    description="Tendril Motifs Infrastructure",
     long_description=readme,
     author="Chintalagiri Shashank",
     author_email='shashank@chintal.in',
