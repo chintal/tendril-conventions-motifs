@@ -15,8 +15,8 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
-Base Primitives for Motifs (:mod:`tendril.conventions.motifs.base`)
--------------------------------------------------------------------
+Base Primitives for Motifs
+--------------------------
 """
 
 from tendril.conventions.series import get_series
