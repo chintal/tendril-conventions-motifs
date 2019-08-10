@@ -46,6 +46,9 @@ class MotifsManager(object):
         self._motifs[name] = motif
 
     def __getattr__(self, item):
+        if item == '__all__':
+            return list(self._motifs.keys()) + \
+                   ['install_motif', 'create']
         return self._motifs[item]
 
     def create(self, motifst):
